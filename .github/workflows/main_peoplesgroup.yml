@@ -1,4 +1,4 @@
-name: Build and Deploy Next.js Static Site to Azure Web App - peoplesgroup
+name: Build and Deploy Next.js 15+ Static Site to Azure Web App - peoplesgroup
 
 on:
   push:
@@ -24,10 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and export Next.js static site
-        run: |
-          npm run build
-          npm run export
+      - name: Build Next.js static site
+        run: npm run build
+        # This automatically generates the static `out/` folder with output: 'export' in next.config.js
 
       - name: Upload out folder as artifact
         uses: actions/upload-artifact@v4
