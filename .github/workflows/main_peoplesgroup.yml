@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # Required for actions/checkout
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -26,19 +26,19 @@ jobs:
 
       - name: Build Next.js static site
         run: npm run build
-        # This automatically generates the static `out/` folder with output: 'export' in next.config.js
+        # This generates the static `out/` folder automatically
 
       - name: Upload out folder as artifact
         uses: actions/upload-artifact@v4
         with:
           name: nextjs-out
-          path: ./out
+          path: ./out  # Upload the static export folder
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     permissions:
-      id-token: write # Required for Azure login
+      id-token: write
       contents: read
 
     steps:
@@ -46,6 +46,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: nextjs-out
+          path: ./out  # Extract artifact into ./out so deployment can find it
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -59,4 +60,4 @@ jobs:
         with:
           app-name: 'peoplesgroup'
           slot-name: 'Production'
-          package: ./out
+          package: ./out  # Now this folder exists, deployment will succeed
