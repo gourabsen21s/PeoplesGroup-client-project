@@ -20,8 +20,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZORION - Mining Excellence from Core to Surface",
-  description: "Professional mining solutions provider specializing in mineral exploration, resource management, and sustainable mining operations across multiple continents.",
+  title: "Peoples Group",
+  description: "We are PEOPLE'S GROUP, your trusted partner for importing and supplying quality coal, manganese ore, and allied minerals for your energy needs.",
 };
 
 export default function RootLayout({
