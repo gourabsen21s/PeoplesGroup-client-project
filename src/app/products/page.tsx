@@ -105,7 +105,7 @@ export default function ProductsPage() {
       title: 'BILLETS',
       description: 'Steel billets are semi-finished products of steel casting. They are the primary feedstock for producing long steel products like bars, rods, and wires, and are essential for various construction and manufacturing industries.',
       features: ['Consistent shape and size', 'High metallurgical quality', 'Ideal for forging and rolling', 'Versatile for long products'],
-      image: '/billets.png'
+      image: '/billets.jpeg'
     },
     {
       title: 'SUGAR S30',
