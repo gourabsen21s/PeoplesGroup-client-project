@@ -6,19 +6,19 @@ export default function ProjectsSection() {
       country: 'AUSTRALIAN COAL',
       title: 'PREMIUM QUALITY HARD COKING COAL',
       description: 'Globally renowned for premium quality, high heat, low impurities. Best for steel manufacturing.',
-      image: '/coal-processing-1.jpg'
+      image: '/australian-coal.png'
     },
     {
       country: 'INDONESIAN COAL',
       title: 'LOW ASH ECO-FRIENDLY THERMAL COAL',
       description: 'Low ash and sulfur content, lightweight, cost-effective. Ideal for boilers and thermal plants.',
-      image: '/coal-processing-2.jpg'
+      image: '/indonesian-coal.png'
     },
     {
       country: 'SOUTH AFRICAN COAL',
       title: 'BALANCED PRICE-PERFORMANCE THERMAL COAL',
       description: 'Known for balanced price-performance ratio. Widely exported for reliability in large-scale applications.',
-      image: '/industrial-facility-1.jpg'
+      image: '/south-coal.png'
     }
   ];
 
