@@ -69,7 +69,7 @@ export default function ProductsPage() {
       title: 'WHITE PEA (Origin: Canada)',
       description: 'Canadian White Peas are a staple in split pea soups and a variety of dishes. They provide a smooth, creamy texture when cooked and are packed with essential nutrients.',
       features: ['High in protein', 'Excellent source of dietary fiber', 'Quick-cooking', 'Creamy texture'],
-      image: '/w-pea.png'
+      image: '/w-pea.jpg'
     },
     {
       title: 'PETCOKE',
