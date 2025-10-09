@@ -5,14 +5,14 @@ export default function TestimonialsSection() {
       author: "Rajesh Kumar",
       role: "Procurement Manager, Steel Industries Ltd",
       location: "Visakhapatnam, India",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+      // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" // Removed
     },
     {
       quote: "THEIR DEEP MARKET EXPERTISE, COMPETITIVE PRICING & RELIABLE SUPPLY CHAIN MADE A HUGE DIFFERENCE IN OUR ENERGY PROCUREMENT STRATEGY",
       author: "Michael Chen",
       role: "Energy Manager, PowerGen Solutions",
       location: "Jakarta, Indonesia",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+      // image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" // Removed
     }
   ];
 
@@ -42,12 +42,15 @@ export default function TestimonialsSection() {
                 </blockquote>
                 
                 <div className="flex items-center">
+                  {/* Image section removed */}
+                  {/*
                   <div className="w-16 h-16 rounded-sm overflow-hidden mr-4">
                     <div 
                       className="w-full h-full bg-cover bg-center"
                       style={{ backgroundImage: `url('${testimonial.image}')` }}
                     ></div>
                   </div>
+                  */}
                   
                   <div>
                     <div className="text-orange-500 font-semibold mb-1">
