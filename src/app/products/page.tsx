@@ -50,7 +50,7 @@ export default function ProductsPage() {
       title: 'MANGANESE ORE',
       description: 'High-grade manganese ore essential for steel production and chemical manufacturing.',
       features: ['High manganese content', 'Low phosphorus', 'Consistent quality', 'Global sourcing'],
-      image: '/manganese-ore.png'
+      image: '/manganese-ore-1.jpeg'
     },
     {
       title: 'RUSSIAN COAL',
