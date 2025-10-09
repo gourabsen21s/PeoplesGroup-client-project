@@ -4,19 +4,19 @@ export default function BlogSection() {
       date: { day: '15', month: 'Dec' },
       title: 'PORTS OPERATIONS STOCK HOLDING',
       excerpt: 'We actively operate through major ports including Visakhapatnam, Vizag, Gannavaram, Krishnapatnam, maintaining over 100,000 tons of coal stock across various grades.',
-      image: '/industrial-facility-1.jpg'
+      image: '/p-op.png'
     },
     {
       date: { day: '10', month: 'Dec' },
       title: 'BUSINESS IN-SIGHT & STRATEGIES',
       excerpt: 'With strong support of our channel partners, we maintain real-time updates on incoming vessel movements and provide informed forecasts to our valued customers.',
-      image: '/company-operations.jpg'
+      image: '/inst.png'
     },
     {
       date: { day: '05', month: 'Dec' },
       title: 'QUALITY CHECKS & INSPECTIONS',
       excerpt: 'We encourage bulk buyers to visit the port and personally verify quality. We also facilitate independent third-party inspections to validate material specifications.',
-      image: '/coal-processing-2.jpg'
+      image: '/quality-inspect.png'
     }
   ];
 
