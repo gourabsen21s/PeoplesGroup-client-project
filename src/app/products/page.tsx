@@ -123,13 +123,13 @@ export default function ProductsPage() {
       title: 'ALUMINIUM INGOT',
       description: 'Aluminium ingots are a primary form of refined aluminum, cast into a specific shape for further processing. They serve as a foundational material for various aluminum alloy products in the automotive, construction, and aerospace industries.',
       features: ['Standardized purity', 'Easy to transport and store', 'Efficient for remelting', 'Versatile for alloy production'],
-      image: '/al-ig.png'
+      image: '/al-ig.jpeg'
     },
     {
       title: 'COPPER INGOT',
       description: 'Copper ingots are a fundamental raw material in the metal industry, used for the production of wires, pipes, sheets, and various alloys. They are valued for their excellent electrical conductivity, corrosion resistance, and malleability.',
       features: ['High electrical conductivity', 'Corrosion resistant', 'Durable and malleable', 'Essential for electrical and plumbing industries'],
-      image: '/c-ig.png'
+      image: '/c-ig.jpeg'
     },
   ];
 
