@@ -132,9 +132,9 @@ export default function Footer() {
             <div className="flex items-center space-x-4 mb-6 lg:mb-0">
               <div className="flex items-center">
                 <img 
-                  src="/company-logo-preview.png" 
+                  src="/logo-people.svg" 
                   alt="People's Group Logo" 
-                  className="h-16 w-auto object-contain"
+                  className="h-11 w-auto object-contain"
                 />
               </div>
               <span className="text-gray-400 text-sm">
