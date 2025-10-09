@@ -61,9 +61,9 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <img 
-                src="/company-logo-preview.png" 
+                src="/logo-people.svg" 
                 alt="People's Group Logo" 
-                className="h-20 w-auto object-contain"
+                className="h-11 w-auto object-contain"
               />
             </Link>
           </div>
