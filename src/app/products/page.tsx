@@ -157,7 +157,7 @@ export default function ProductsPage() {
               OUR PRODUCTS
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Premium coal and minerals sourced from trusted suppliers worldwide, meeting the highest industry standards.
+              Superior commodities, globally-sourced and certified to the highest industry standards.
             </p>
           </div>
         </section>
