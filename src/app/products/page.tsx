@@ -60,13 +60,13 @@ export default function ProductsPage() {
     },
     // New Products
     {
-      title: 'BROWN CHICKPEA (Origin: Australia)',
+      title: 'BROWN CHICKPEA (Imported)',
       description: 'Australian Brown Chickpeas are a versatile and nutrient-rich legume, widely used in various culinary applications globally. They are known for their nutty flavor and firm texture.',
       features: ['Rich in protein and fiber', 'Ideal for curries and stews', 'Nutrient-dense', 'Versatile culinary use'],
       image: '/b-pea.png'
     },
     {
-      title: 'WHITE PEA (Origin: Canada)',
+      title: 'WHITE PEA (Imported)',
       description: 'Canadian White Peas are a staple in split pea soups and a variety of dishes. They provide a smooth, creamy texture when cooked and are packed with essential nutrients.',
       features: ['High in protein', 'Excellent source of dietary fiber', 'Quick-cooking', 'Creamy texture'],
       image: '/w-pea.jpg'
