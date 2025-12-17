@@ -233,8 +233,8 @@ function ContactForm() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Phone</h4>
-                          <p className="text-gray-300 text-sm">+91 98765 43210</p>
-                          <p className="text-gray-300 text-sm">+91 87654 32109</p>
+                          <p className="text-gray-300 text-sm">+91 72041 78749</p>
+                          <p className="text-gray-300 text-sm">+91 94949 96250</p>
                         </div>
                       </div>
                       
@@ -246,8 +246,8 @@ function ContactForm() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Email</h4>
-                          <p className="text-gray-300 text-sm">info@peoplesgroup.com</p>
-                          <p className="text-gray-300 text-sm">sales@peoplesgroup.com</p>
+                          <p className="text-gray-300 text-sm">info@peoplesgroup.biz</p>
+                          <p className="text-gray-300 text-sm">Sandy@peoplesgroup.biz</p>
                         </div>
                       </div>
                       
@@ -261,9 +261,10 @@ function ContactForm() {
                         <div>
                           <h4 className="font-semibold text-white mb-1">Head Office</h4>
                           <p className="text-gray-300 text-sm">
-                            123 Mining District<br />
-                            Visakhapatnam, Andhra Pradesh<br />
-                            530001, India
+                            SWASTIKAYAN BUILDING,<br />
+                            Government Hospital Road,<br />
+                            Ghutkala Zade Ward, Bhadravati,<br />
+                            Chandrapur, Maharashtra - 442902
                           </p>
                         </div>
                       </div>
@@ -341,7 +342,7 @@ function ContactForm() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="tel:+919876543210"
+                  href="tel:+917204178749"
                   className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -350,7 +351,7 @@ function ContactForm() {
                   Call Us Now
                 </a>
                 <a 
-                  href="mailto:info@peoplesgroup.com"
+                  href="mailto:info@peoplesgroup.biz"
                   className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-200"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
