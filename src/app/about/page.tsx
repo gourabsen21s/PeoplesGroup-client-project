@@ -57,7 +57,7 @@ export default function AboutPage() {
                   At PEOPLE&apos;S GROUP, we have ethically built our legacy since 2018, beginning as a proprietary firm and evolving into a dynamic force in coal trading. We specialize in sourcing and supplying Indian, Indonesian, Russian, U.S., and South African coal, serving diverse industrial segments with unwavering dedication to quality and value.
                 </p>
                 <p className="text-gray-400 text-lg">
-                  Our commitment extends beyond mere transactions; we foster lasting partnerships built on trust, transparency, and mutual growth. With a deep understanding of global markets and an extensive network of reliable suppliers, we ensure that our clients receive the finest quality coal at competitive prices.
+                  Our commitment extend beyond mere transactions; we foster lasting partnerships built on trust, transparency, and mutual growth. With a deep understanding of global markets and an extensive network of reliable suppliers, we ensure that our clients receive the finest quality coal at competitive prices.
                 </p>
               </div>
               <div className="relative">
