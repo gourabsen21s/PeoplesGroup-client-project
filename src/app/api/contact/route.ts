@@ -98,7 +98,7 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
+        from: process.env.RESEND_FROM_EMAIL || 'noreply@peoplesgroup.biz',
         to: ['info@peoplesgroup.biz', 'Sandy@peoplesgroup.biz'],
         reply_to: email,
         subject: `New Contact Form: ${subject || 'Peoples Group Inquiry'}`,
