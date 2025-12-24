@@ -307,20 +307,7 @@ function ContactForm() {
                         </div>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                          <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-white mb-1">Business Hours</h4>
-                          <p className="text-gray-300 text-sm">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                          <p className="text-gray-300 text-sm">Saturday: 9:00 AM - 2:00 PM</p>
-                          <p className="text-gray-300 text-sm">Sunday: Closed</p>
-                        </div>
-                      </div>
-                    </div>
+                                          </div>
                   </div>
                   
                   {/* Quick Stats */}
