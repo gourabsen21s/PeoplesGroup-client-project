@@ -47,13 +47,13 @@ export async function POST(request: Request) {
     console.log('API: Creating SMTP transporter');
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false, // true for 465, false for other ports
+      port: parseInt(process.env.SMTP_PORT || '465'), // Try port 465 with SSL
+      secure: true, // true for 465 (SSL), false for other ports
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
-    } as any); // Type assertion to handle timeout properties
+    });
 
     const htmlTemplate = `
       <!DOCTYPE html>
