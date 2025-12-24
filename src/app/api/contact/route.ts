@@ -2,10 +2,15 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
+  console.log('API: Contact request received');
+  
   try {
     // Check content type
     const contentType = request.headers.get('content-type');
+    console.log('API: Content-Type:', contentType);
+    
     if (!contentType?.includes('application/json')) {
+      console.log('API: Invalid content type error');
       return NextResponse.json(
         { success: false, message: 'Invalid content type. Expected JSON.' },
         { status: 400 }
@@ -13,7 +18,10 @@ export async function POST(request: Request) {
     }
 
     const body = await request.text(); // Get raw text first
+    console.log('API: Request body length:', body.length);
+    
     if (!body.trim()) {
+      console.log('API: Empty body error');
       return NextResponse.json(
         { success: false, message: 'Request body is empty.' },
         { status: 400 }
@@ -24,8 +32,9 @@ export async function POST(request: Request) {
     let parsedData;
     try {
       parsedData = JSON.parse(body);
+      console.log('API: JSON parsed successfully');
     } catch (parseError) {
-      console.error('JSON parse error:', parseError);
+      console.error('API: JSON parse error:', parseError);
       return NextResponse.json(
         { success: false, message: 'Invalid JSON format in request body.' },
         { status: 400 }
@@ -33,16 +42,18 @@ export async function POST(request: Request) {
     }
 
     const { name, email, company, phone, subject, message } = parsedData;
+    console.log('API: Form data parsed:', { name, email, subject });
 
+    console.log('API: Creating SMTP transporter');
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
+      secure: false, // true for 465, false for other ports
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
-    });
+    } as any); // Type assertion to handle timeout properties
 
     const htmlTemplate = `
       <!DOCTYPE html>
@@ -136,14 +147,36 @@ export async function POST(request: Request) {
       html: htmlTemplate,
     };
 
+    console.log('API: Verifying SMTP connection...');
+    try {
+      await transporter.verify();
+      console.log('API: SMTP connection verified');
+    } catch (verifyError) {
+      console.error('API: SMTP verification failed:', verifyError);
+      throw new Error(`SMTP connection failed: ${verifyError instanceof Error ? verifyError.message : 'Unknown error'}`);
+    }
+
+    console.log('API: Sending mail...');
     await transporter.sendMail(mailOptions);
+    console.log('API: Mail sent successfully');
 
     return NextResponse.json({ 
       success: true, 
       message: 'Message sent successfully!'
     });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('API: Error in contact route:', error);
+    console.error('API: Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : 'No stack trace',
+      envVars: {
+        SMTP_HOST: process.env.SMTP_HOST ? 'Set' : 'Not set',
+        SMTP_USER: process.env.SMTP_USER ? 'Set' : 'Not set',
+        SMTP_PASSWORD: process.env.SMTP_PASSWORD ? 'Set' : 'Not set',
+        SMTP_PORT: process.env.SMTP_PORT || 'Not set'
+      }
+    });
+    
     return NextResponse.json(
       { 
         success: false, 
