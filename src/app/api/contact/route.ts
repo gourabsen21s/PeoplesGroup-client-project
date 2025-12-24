@@ -3,7 +3,36 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    const { name, email, company, phone, subject, message } = await request.json();
+    // Check content type
+    const contentType = request.headers.get('content-type');
+    if (!contentType?.includes('application/json')) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid content type. Expected JSON.' },
+        { status: 400 }
+      );
+    }
+
+    const body = await request.text(); // Get raw text first
+    if (!body.trim()) {
+      return NextResponse.json(
+        { success: false, message: 'Request body is empty.' },
+        { status: 400 }
+      );
+    }
+
+    // Try to parse JSON with better error handling
+    let parsedData;
+    try {
+      parsedData = JSON.parse(body);
+    } catch (parseError) {
+      console.error('JSON parse error:', parseError);
+      return NextResponse.json(
+        { success: false, message: 'Invalid JSON format in request body.' },
+        { status: 400 }
+      );
+    }
+
+    const { name, email, company, phone, subject, message } = parsedData;
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
